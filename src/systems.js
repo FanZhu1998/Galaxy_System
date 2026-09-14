@@ -1,0 +1,9 @@
+// Synthetic planetary systems. Semimajor axes are AU; stellar masses are solar masses.
+export const systems = [
+  {name:'Helios', mass:1, radius:8, angle:.30, inc:.028, color:'gold', type:'Sunlike star', planets:[['Cinder',.44,.19,.064,'planet-clay'],['Thalassa',1,.045,.102,'planet-blue'],['Sylva',1.68,.075,.085,'planet-green'],['Aster',2.8,.12,.16,'planet-sand'],['Rhea',4.7,.055,.205,'planet-sand','ring']]},
+  {name:'Aurelia', mass:1.4, radius:11.6, angle:2.15, inc:-.023, color:'ice', type:'Warm white star', planets:[['Ember',.7,.15,.072,'planet-clay'],['Opal',1.42,.06,.115,'planet-green'],['Saffron',2.55,.18,.16,'planet-sand'],['Iris',4.3,.09,.23,'violet','ring']]},
+  {name:'Vesper', mass:.78, radius:5.5, angle:3.47, inc:.052, color:'gold', type:'Orange dwarf', planets:[['Flint',.36,.12,.062,'planet-clay'],['Mora',.68,.055,.095,'planet-green'],['Azure',1.22,.09,.118,'planet-blue'],['Pallas',2.6,.23,.2,'planet-sand','ring']]},
+  {name:'Lyra', mass:1.9, radius:13.8, angle:5.06, inc:.035, color:'ice', type:'Blue-white star', planets:[['Pearl',1.05,.08,.09,'planet-sand'],['Serein',2.1,.15,.135,'planet-blue'],['Oberon',3.45,.09,.225,'violet','ring'],['Zephyr',5.8,.21,.2,'planet-green']]},
+  {name:'Neris', mass:.55, radius:9.8, angle:4.14, inc:-.038, color:'planet-clay', type:'Cool dwarf', planets:[['Coal',.25,.12,.045,'planet-clay'],['Nacre',.48,.04,.073,'planet-sand'],['Pelagos',.9,.11,.097,'planet-blue'],['Tern',1.7,.18,.12,'planet-green'],['Umbra',3.2,.07,.2,'violet','ring']]},
+  {name:'Eos', mass:1.15, radius:16.2, angle:1.06, inc:-.018, color:'gold', type:'Yellow-white star', planets:[['Lumen',.6,.21,.07,'planet-sand'],['Viridia',1.18,.025,.107,'planet-green'],['Cobalt',2.15,.13,.13,'planet-blue'],['Aurum',3.6,.06,.235,'planet-sand','ring'],['Noctis',5.35,.15,.165,'violet']]}
+];

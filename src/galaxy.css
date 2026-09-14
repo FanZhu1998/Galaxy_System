@@ -1,0 +1,21 @@
+#astra-gravity { --space: light-dark(#070b13, #03060c); --space-ink: light-dark(#e3eaf6, #dce5f5); --space-muted: light-dark(#aab9cf, #a0afc8); --gold: light-dark(#e6cca7, #eddbba); --ice: light-dark(#b3cadd, #bbd3e6); --violet: light-dark(#a398b5, #afa2bd); --emission: light-dark(#bb7080, #cf8090); --planet-blue: light-dark(#549db8, #73b4cf); --planet-clay: light-dark(#b98067, #ce9677); --planet-green: light-dark(#8ea897, #a2bca5); --planet-sand: light-dark(#bca57d, #d0b68c); --orbit: light-dark(#556985, #52617b); width: 100%; color: var(--foreground); }
+    #astra-gravity .astra-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    #astra-gravity h2 { margin: 0; }
+    #astra-gravity .astra-eyebrow { letter-spacing: .16em; color: var(--muted-foreground); }
+    #astra-gravity .astra-stage { position: relative; height: clamp(390px, 69vw, 540px); width: 100%; overflow: hidden; margin-top: 12px; color: var(--space-ink); }
+    #astra-gravity canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+    #astra-gravity canvas:active { cursor: grabbing; }
+    #astra-gravity .astra-hud { position: absolute; left: 20px; right: 20px; top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px 14px; pointer-events: none; letter-spacing: .08em; color: var(--space-muted); }
+    #astra-gravity .astra-bottom { position: absolute; left: 20px; right: 20px; bottom: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; pointer-events: none; color: var(--space-muted); }
+    #astra-gravity .astra-compass { letter-spacing: .08em; }
+    #astra-gravity .astra-label-layer { position: absolute; inset: 0; pointer-events: none; }
+    #astra-gravity .astra-label { position: absolute; left: 0; top: 0; white-space: nowrap; color: var(--space-ink); text-shadow: 0 1px 8px var(--space), 0 0 4px var(--space); }
+    #astra-gravity .astra-label::before { content: ''; display: inline-block; width: 12px; height: 1px; background: var(--space-muted); margin-right: 5px; vertical-align: middle; }
+    #astra-gravity .astra-label.is-active { color: var(--gold); }
+    #astra-gravity .astra-loading { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; color: var(--space-muted); }
+    #astra-gravity .astra-footer { display: flex; align-items: center; gap: 16px; justify-content: space-between; flex-wrap: wrap; padding-top: 12px; }
+    #astra-gravity .astra-rate { flex: 1 1 210px; max-width: 320px; }
+    #astra-gravity .astra-rate label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; }
+    #astra-gravity .astra-detail { margin-top: 12px; min-height: 2em; color: var(--muted-foreground); overflow-wrap: anywhere; }
+    #astra-gravity [hidden] { display: none !important; }
+    @media (max-width: 430px) { #astra-gravity .astra-heading { gap: 6px; } #astra-gravity .astra-hud, #astra-gravity .astra-bottom { left: 12px; right: 12px; } #astra-gravity .astra-rate { max-width: none; } }

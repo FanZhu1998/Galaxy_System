@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Astra · Galaxy System</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./galaxy.css">
+</head>
+<body>
+<div id="astra-gravity">
+  
+  <div class="astra-heading">
+    <h2>Astra</h2>
+    <span class="astra-eyebrow text-small">A GALAXY IN MOTION</span>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Explore
+      <select class="form-select" data-view aria-label="Explore the galaxy or a solar system">
+        <option value="galaxy">Galaxy overview</option>
+        <option value="0">01 · Helios</option>
+        <option value="1">02 · Aurelia</option>
+        <option value="2">03 · Vesper</option>
+        <option value="3">04 · Lyra</option>
+        <option value="4">05 · Neris</option>
+        <option value="5">06 · Eos</option>
+      </select>
+    </label>
+    <label class="form-label" data-planet-field hidden>Inspect planet
+      <select class="form-select" data-planet aria-label="Inspect a planet"></select>
+    </label>
+    <button type="button" class="btn" data-play aria-pressed="false">Pause</button>
+    <label class="form-check"><input class="form-check-input" data-orbits type="checkbox"><span class="form-check-label">Orbit paths</span></label>
+  </div>
+  <div class="astra-stage">
+    <canvas role="img" aria-label="Interactive 3D spiral galaxy with a warm stellar bulge, a luminous blue-white disk, dusty spiral lanes, and muted pink emission nebulae. Six solar systems follow galactic gravity. Choose a system to explore its planets; drag or use the camera buttons to rotate and zoom.">A 3D galaxy model with six explorable solar systems, layered nebulae, and gravity-based orbital motion.</canvas>
+    <div class="astra-label-layer" aria-hidden="true"></div>
+    <div class="astra-hud text-small"><span data-heading>SPIRAL GALAXY</span><span data-scale>kiloparsecs · kpc</span></div>
+    <div class="astra-bottom text-small">
+      <span class="astra-clock tabular-nums" data-clock>0.0 Myr</span>
+      <span class="astra-compass" data-orientation>OBLIQUE VIEW</span>
+    </div>
+    <div class="astra-loading" data-loading role="status">Resolving the star field…</div>
+  </div>
+  <div class="astra-footer">
+    <div class="astra-rate">
+      <label class="form-label" for="astra-speed"><span>Time rate</span><span class="tabular-nums" data-rate>3.0 Myr / s</span></label>
+      <input class="form-range" id="astra-speed" type="range" min="-1" max="1" step="0.05" value="0" aria-label="Simulation time rate">
+    </div>
+    <div class="viz-row" aria-label="Camera controls">
+      <button class="btn btn-ghost" type="button" data-camera="left" aria-label="Rotate camera left" data-tooltip="Rotate left"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button>
+      <button class="btn btn-ghost" type="button" data-camera="right" aria-label="Rotate camera right" data-tooltip="Rotate right"><i data-lucide="rotate-cw" aria-hidden="true"></i></button>
+      <button class="btn btn-ghost" type="button" data-camera="in" aria-label="Zoom in" data-tooltip="Zoom in"><i data-lucide="zoom-in" aria-hidden="true"></i></button>
+      <button class="btn btn-ghost" type="button" data-camera="out" aria-label="Zoom out" data-tooltip="Zoom out"><i data-lucide="zoom-out" aria-hidden="true"></i></button>
+      <button class="btn btn-ghost" type="button" data-camera="tilt" aria-pressed="false">Top view</button>
+    </div>
+  </div>
+  <div class="astra-detail text-small" role="status" aria-live="polite" data-detail>6 synthetic solar systems · 24,000 tracer stars · Smooth galactic gravity</div>
+  
+</div>
+<script type="module" src="./galaxy.js"></script>
+</body>
+</html>

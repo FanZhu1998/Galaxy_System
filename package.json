@@ -1,0 +1,15 @@
+{
+  "name": "galaxy-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An offline-ready 3D galaxy with gravitational planetary orbits and volumetric nebula rendering.",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test"
+  }
+}
